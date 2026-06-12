@@ -30,6 +30,7 @@ def insert_patient_data(patient: Patient):
     print(patient.name)
     print(patient.age)
     print(patient.married)
+    print(patient.contact_details)
     print("Data inserted successfully")    
 
 patient_info ={'name': 'aditya','email':'abc@gmail.com','url':'http://linkedin.com','age': 30,'weight':44.5,'allergies':['pollen','dust'],'contact_details':{'phone no.':'123456789'}} 
