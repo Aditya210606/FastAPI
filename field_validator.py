@@ -30,6 +30,15 @@ class Patient(BaseModel):
    def transform_name(cls,value):
        
        return value.upper()
+   
+   @field_validator('age', mode='after')     # if mode = before error will occur because of type corusion since it will take value before type corusion
+   @classmethod
+   def age_validator(cls, value):
+
+      if 0 < value < 100 :
+         return value 
+      else:
+         return ValueError("Age should be gt 0 and lt 100")
                                 
 def insert_patient_data(patient:Patient):
     print(patient.name)
@@ -37,7 +46,7 @@ def insert_patient_data(patient:Patient):
     print(patient.contact_details)
     print("Data inserted successfully")    
 
-patient_info ={'name': 'aditya','email':'abc@icici.com','url':'http://linkedin.com','age': 30,'weight':44.5,'married':'false','allergies':['pollen','dust'],'contact_details':{'phone no.':'123456789'}} 
+patient_info ={'name': 'aditya','email':'abc@icici.com','url':'http://linkedin.com','age': "30",'weight':44.5,'married':'false','allergies':['pollen','dust'],'contact_details':{'phone no.':'123456789'}} 
 
 patient1 = Patient(**patient_info)
 
