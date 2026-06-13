@@ -29,7 +29,7 @@ class Patient(BaseModel):
    @classmethod
    def transform_name(cls,value):
        
-       return value.upper()
+       return value.lower()
                                 
 def insert_patient_data(patient:Patient):
     print(patient.name)
