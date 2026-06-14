@@ -38,6 +38,5 @@ patient_info ={'name': 'aditya','email':'abc@gmail.com','url':'http://linkedin.c
 patient1 = Patient(**patient_info)
 
 insert_patient_data(patient1)
-
-
-
+ 
+ 
