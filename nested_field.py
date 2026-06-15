@@ -1,3 +1,4 @@
+
 from pydantic import BaseModel
 
 class Address(BaseModel):
@@ -23,5 +24,3 @@ patient1 = Patient(**patient_dict)
 print(patient1.address.city)
 
     
-
-
