@@ -17,7 +17,7 @@ class Patient(BaseModel):
    def validate_emergency_contact(cls,model):
        
        if model.age > 60 and 'emergency' not in model.contact_details :
-           raise ValueError("Patient above 60 should have emergency contact in contact details ")
+           raise ValueError("Patient above 60 should have emergency contact in contact details else the patient will not be added")
        return model
                                 
 def insert_patient_data(patient:Patient):
