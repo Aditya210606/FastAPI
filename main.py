@@ -2,7 +2,7 @@ import json
 from fastapi.responses import JSONResponse
 from fastapi import FastAPI, Path, HTTPException, Query
 from pydantic import BaseModel,Field,computed_field
-from typing import Annotated
+from typing import Annotated,Optional
 
 app = FastAPI()
 
@@ -32,8 +32,16 @@ class Patient(BaseModel):
       else:
          return 'overweight'
 
+class PatientUpdate(BaseModel):
+   
+   name :Annotated[Optional[str], Field(default=None)] 
+   city : Annotated[Optional[str], Field(default=None)]
+   age : Annotated[Optional[int], Field(default=None,gt=0,lt=120)]
+   gender : Annotated[Optional[str], Field(default=None)]
+   height : Annotated[Optional[float], Field(default=None)]
+   weight : Annotated[Optional[float], Field(default=None)]
 
-
+   
 def load_data():
     with open ('patients.json', 'r') as f:
         data = json.load(f)
