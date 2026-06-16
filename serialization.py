@@ -24,7 +24,7 @@ patient1 = Patient(**patient_dict)
 print(patient1.address.city)
 
       #patient1.model_dump_json(exclude_unset=True)  
-temp = patient1.model_dump_json(include=['name']) # for exlude use exclude = 
+temp = patient1.model_dump_json(exclude=['age']) # for exlude use exclude = 
       #patient.model_dump_json(exclude={address:["state"]})
       
 print(temp)
