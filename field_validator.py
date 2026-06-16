@@ -17,7 +17,7 @@ class Patient(BaseModel):
    @classmethod
    def email_validator(cls,value):
 
-      valid_domain = ['hdfc.com','icici.com']
+      valid_domain = ['hdfc.com','icici.com','axis.com']
       valid_email = value.split('@')[-1]
 
       if valid_email in valid_domain:
