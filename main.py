@@ -110,3 +110,12 @@ def create_patient(patient:Patient):
    save_data(data)
 
    return JSONResponse (status_code=201 ,content={'message':'Patient added successfully'})
+
+
+@app.put('/edit/{patient_id}')
+def update_patient(patient_id:str ,update_patient: PatientUpdate):
+
+   data = load_data
+
+   if patient_id not in data :
+      raise HTTPException(status_code=404 , detail='patient not found')
