@@ -69,7 +69,7 @@ def view():
 
 @app.get("/patient/{patient_id}")
 
-def view_patient(patient_id:str = Path(...,description='Enter patient ID' , example='P001')):    #(...) means this part is required 
+def view_patient(patient_id:str = Path(...,description='Enter patient ID' , example='P002')):    #(...) means this part is required 
      #load data for all the patients
     data=load_data()
 
