@@ -54,7 +54,7 @@ def save_data(data):
 
 @app.get("/")
 def hello():
-    return {'message':'Hello welcome to AI world'}
+    return {'message':'Hello welcome to world'}
 
 @app.get("/about")
 def about():
