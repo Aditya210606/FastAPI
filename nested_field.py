@@ -24,4 +24,7 @@ patient1 = Patient(**patient_dict)
 
 print(patient1.address.city)
 
+print(patient1.address.pincode)
+
+
     
