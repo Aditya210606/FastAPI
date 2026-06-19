@@ -10,7 +10,7 @@ class Address(BaseModel):
 
 class Patient(BaseModel):
     name: str
-    age: str
+    age: int 
     address : Address
 
 
