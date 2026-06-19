@@ -18,7 +18,7 @@ address_info = {'house_no':'2','city':'virar','street':'two','state':'maharashtr
 
 address1 = Address(**address_info)
 
-patient_dict = {'name':'aditya','age':'19','address':address1}
+patient_dict = {'name':'aditya','age':'20','address':address1}
 
 patient1 = Patient(**patient_dict)
 
