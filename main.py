@@ -76,7 +76,7 @@ def view_patient(patient_id:str = Path(...,description='Enter patient ID' , exam
     if patient_id in data :
         return data[patient_id]
     else:
-        raise HTTPException (status_code=404,detail='Patient not found')
+        raise HTTPException (status_code=404,detail='Patient not found enter valid patient')
 
 @app.get('/sort')
 def sort_patient(sort_by: str = Query(...,description='Sort the patient on the bases of height, weight or bmi'),order : str = Query('asc', description='Sort the patient in asc or dsc order') ):
