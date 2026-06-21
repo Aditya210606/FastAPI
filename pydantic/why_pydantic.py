@@ -28,7 +28,7 @@ class Patient(BaseModel):
 
 def insert_patient_data(patient: Patient):
     print(patient.name)
-    print(patient.age)
+    
     print(patient.married)
     print(patient.contact_details)
     print("Data inserted successfully")    
