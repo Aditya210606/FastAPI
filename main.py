@@ -109,7 +109,7 @@ def create_patient(patient:Patient):
 
    save_data(data)
 
-   return JSONResponse (status_code=201 ,content={'message':'Patient added successfully'})
+   return JSONResponse (status_code=201 ,content={'message':'Patient added successfully, thank you'})
 
 
 @app.put('/edit/{patient_id}')
