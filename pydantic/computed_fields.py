@@ -28,7 +28,7 @@ def insert_patient_data(patient:Patient):
     print("Data inserted successfully") 
     print('BMi', patient.calculate_bmi)   
 
-patient_info ={'name': 'aditya','email':'abc@icici.com','url':'http://linkedin.com','age': "67",'weight':44.5,'height':'1.56','married':'false','allergies':['pollen','dust'],'contact_details':{'phone no.':'123456789','emergency':'213'}} 
+patient_info ={'name': 'aditya','email':'abc@icici.com','url':'http://www.google.com','age': "67",'weight':44.5,'height':'1.56','married':'false','allergies':['pollen','dust'],'contact_details':{'phone no.':'123456789','emergency':'213'}} 
 
 patient1 = Patient(**patient_info)
 
